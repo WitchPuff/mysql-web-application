@@ -57,7 +57,7 @@ cd mysite
 python manage.py runserver
 ```
 
-访问http://127.0.0.1:8000即可。
+访问http://127.0.0.1:8000
 
 ## 效果展示
 
