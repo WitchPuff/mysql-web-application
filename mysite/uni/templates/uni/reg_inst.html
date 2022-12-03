@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructor Register</title>
+</head>
+
+<br>
+
+<h1><center>Instructor Register</center></h1>
+
+<br>
+<body><center>
+<form method="post">
+    <p>Instructor ID   <input type="text" name="id"></p>
+    <p>Name         <input type="text" name="name"></p>
+    <p>
+        <td valign="middle" align="right">Department</td>
+        <td>
+        <select class="form-control" id="dept_name" name="dept_name">
+        <option selected="" name="sdept">---Choices---</option>
+            {% for i in deptlist.values %}
+               <option value="{{ i.dept_name }}" name="sdept">{{ i.dept_name }}</option>
+            {% endfor %}
+        </select>
+        </td>
+    </p>
+    <p>Salary   <input type="text" name="salary"></p>
+    <p><input type="submit" value="Register"></p>
+</form></center>
+<hr/>
+<h2><center>Register Result</h2></center><br>
+ <table border="1" cellspacing="0" bordercolor="#000000" width=50% height=30% align=center style="border-collapse:collapse;">
+        <tr>
+            <td><b>Instructor ID</td>
+            <td><b>Name</td>
+            <td><b>Department</td>
+            <td><b>Salary</td>
+        </tr>
+        <tr>
+            {#展示数据#}
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.dept_name}}</td>
+            <td>{{i.salary}}</td>
+        </tr>
+    </table>
+    <br>
+{% if msg %}
+<h3><center>{{msg}}</center></h3>
+
+{% endif %}
+<br>
+<br>
+<center><a href="http://127.0.0.1:8000">Return Home Page</a></center>
+
+</body>
+</html>

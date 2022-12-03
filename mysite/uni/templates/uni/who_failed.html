@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Failed Query</title>
+</head>
+
+<br>
+
+<h1><center>Failed Query</center></h1>
+
+<br>
+<body>
+<hr/>
+<h2><center>Query Result</h2></center><br>
+ <table border="1" cellspacing="0" bordercolor="#000000" width=50% height=30% align=center style="border-collapse:collapse;">
+        <tr>
+            <td><b>Student ID</td>
+            <td><b>Name</td>
+        </tr>
+        {% for t in i %}
+            <tr>
+                {#展示数据#}
+                <td>{{t.id}}</td>
+                <td>{{t.name}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+{% if msg %}
+<h3><center>{{msg}}</center></h3>
+{% endif %}
+<br>
+<br>
+<center><a href="http://127.0.0.1:8000">Return Home Page</a></center>
+
+</body>
+</html>
