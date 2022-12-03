@@ -17,6 +17,11 @@
 ## 运行方式
 
 默认Python + Django + mysql环境已经配置好了，连接的是本地数据库（db-book官网的大学数据库模板），数据库结构定义在`DDL.sql`中，导入数据可以选择`largeRelationsInsertFile.sql`或`smallRelationsInsertFile.sql`。
+克隆仓库：
+```
+git clone https://github.com/WitchPuff/mysql-web-application
+cd site
+```
 
 可以在`/mysite/mysite/settings.py`中修改连接的数据库（需要事先在本地创建数据库）：
 
