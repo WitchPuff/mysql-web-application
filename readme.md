@@ -21,7 +21,7 @@
 克隆仓库：
 ```
 git clone https://github.com/WitchPuff/mysql-web-application
-cd site
+cd mysite
 ```
 
 可以在`/mysite/mysite/settings.py`中修改连接的数据库（需要事先在本地创建数据库）：
